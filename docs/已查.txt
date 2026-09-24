@@ -1,0 +1,64 @@
+已按清单的 9 项逐项查证，优先采用 **2026-09-21 当前官方页面/官方文档**。原文件列出的冲突点见 、、。
+
+| #                          | 查证结果                                                                                                                                                                                                                                                    | 结论/建议回填                                                                                         |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **1 GLM 国际 Coding Plan**   | **确认 18 / 80 / 168 美元/月**。Z.ai 当前官方内容显示 Lite $18、Pro $80、Max $168；另有页面显示折扣后的 $12.6 / $56 / $117.6，但原价明确为 18/80/168。([ZCode][1])                                                                                                                         | **改为 18 / 80 / 168**。原 18/72/160 已过时。                                                           |
+| **2 GLM 国内 Coding Plan**   | **暂不能把 49 / 149 / 469 定为当前现售价。** BigModel 主定价页是 JS 页面，搜索抓取不到卡片；更值得注意的是 ZCode **当前官方文档**中的 BigModel 截图明确写着个人套餐 **¥118 / ¥538 / ¥1,078**。([ZCode][2])                                                                                                     | 原清单“xlsx 大概率旧快照”的判断应撤回。现有官方证据反而支持 **118 / 538 / 1,078**；49/149/469 如要入库，仍需浏览器实际登录/打开购买页核验。      |
+| **3 TRAE**                 | 官方 2 月公告明确存在 **Lite / Pro / Pro+ / Ultra** 四档，并写明当时范围 **$3–$100/月**，其中 Pro 是 $10；因此 **Pro+ 确实存在**。([TRAE][3]) 当前 pricing 页是动态渲染，抓取文本没有暴露卡片金额，故无法用公开 HTML 独立确认 xlsx 的 $20/$60/$200。([TRAE][4])                                                           | **Pro+ 存在：已确认。** $20/$60/$200：有采集快照支持，但本次无法由可抓取官方文本二次确认；不要拿旧公告 $3/$10/…/$100 覆盖当前快照。            |
+| **4 SuperGrok**            | 现在已经可以由 xAI 官方页直接确认：**SuperGrok $30/月、SuperGrok Plus $100/月**。官方比较表还列出 SuperGrok Heavy，但当前抓取文本没有给 Heavy 金额。([SpaceXAI][5])                                                                                                                              | **30 / 100 可正式入库；Heavy $300 暂不入库**，除非实际购买页显示金额。                                                 |
+| **5 Gemini 3.5 Flash**     | **真实存在。** Google 当前官方 API 定价页明确列出 `gemini-3.5-flash`；标准文本价格目前为 **$0.75 输入 / $4.50 输出 / 1M tokens**。([Google AI for Developers][6]) 同时 **Gemini 3.8 Flash 也存在**，当前促销价至 2026-12-31 为 $0.75/$3.75，2027-01-01 起 $1.50/$7.50。([Google AI for Developers][6]) | **3.5 与 3.8 并存，不应删除 3.5。** 但原文给 3.5 的 **$1.50/$9.00 不对**，当前官方是 **$0.75/$4.50**。                 |
+| **6 MiniMax 国际旧签约档**       | 两组数字**都对，但对象不同**。新购官方月付是 **$22 / $55 / $132**。([MiniMax API Docs][7]) 迁移文档明确写老 Plus/Max 用户 **contracted price continues to apply**，例如 Plus $20、Max $50。([MiniMax API Docs][8])                                                                          | 新用户现售：**22/55/132**；**20/50/120 属历史签约/ grandfathered price，不是当前公开新购价**。不要删除，可另设“旧订阅保留价”。        |
+| **7 Kimi 新会员额度**           | 官方文档之间确实存在表述混杂，但 Kimi Code 的错误参考给出了最关键区分：**旧会员** Andante/Moderato/Allegretto/Allegro 有 7 天额度；**新会员 Go/Plus/Pro/Max 已取消每周额度限制**。新会员仍有 **5 小时滚动窗口 + 共享月度额度**。([Kimi][9]) 另一官方帮助页仍笼统写“5小时/周”，明显没有完整区分新旧套餐。([Kimi][10])                                     | 新计划应记为：**5 小时滚动限额 + 月度共享额度；无每周额度**。购买卡/帮助页里的“周额度”不能直接套到 Go/Plus/Pro/Max。人民币具体套餐价格本次搜索结果不足以可靠定值。 |
+| **8 GLM-5.3-Flash 国内 5 折** | BigModel 当前价格页为 JS 动态页，本次抓取无法读出促销卡片，也没有检索到能明确给出**促销截止日期**的官方可索引文本。原文件记录的冲突是常规 **0.8/0.23/2.8** 与 FAQ 促销 **0.4/0.115/1.4**。                                                                                                                              | **仍标“待核促销有效期”**。不能仅凭旧 FAQ 把半价作为长期基础价。建议基础价与“限时促销价”分字段保存。                                        |
+| **9 xAI 美国区域端点 ×1.1**      | **完全确认，而且不是推导值。** xAI 官方 API Pricing 明确写：US regional endpoint 的 token usage 按全球标准费率 **1.1×，即 10% premium**；并说明作用于 input、output、cached input 和 long-context rates。当前 US endpoint 仅列 `grok-4.6`。([Grok API Documentation][11])                            | xlsx 的“×1.1”**有官方依据**。但不要把任意模型都机械生成 US 行：当前官方页写的是 US endpoint **currently `grok-4.6` only**。    |
+
+### 最需要改动的几项
+
+**#1 可以定死：18 / 80 / 168。** 这正好支持你 2026-09-21 的 xlsx 采集，而不是文档中的 18/72/160。([ZCode][1])
+
+**#2 与清单原先预判相反。** 当前能找到的官方 ZCode 文档仍直接展示 **¥118 / ¥538 / ¥1,078**，所以不能再写“xlsx 大概率是旧快照”。([ZCode][2])
+
+**#5 需要纠正的不是“Gemini 3.5 Flash 是否存在”，而是它的价格。** Google 官方当前同时列 3.5、3.6、3.7、3.8 Flash；3.5 Flash 标准文本价为 **$0.75/$4.50**，而不是文件里记录的 $1.50/$9.00。([Google AI for Developers][6])
+
+**#7 可以解释掉表面矛盾：新旧会员规则不同。** Kimi 官方技术文档明确说每周 7 天额度错误“仅适用于老会员”，新 Go/Plus/Pro/Max 已取消周额度；因此新套餐应按 **5 小时滚动 + 月度总额度**记录。([Kimi][9])
+
+**#9 也可以直接结案：×1.1 是 xAI 官方规则，不是表格作者自行推导。** 不过模型适用范围必须跟随官方 US endpoint 支持列表更新。([Grok API Documentation][11])
+
+因此，9 项中可直接结案的是 **#1、#4（Heavy 金额除外）、#5、#6、#7（人民币价格除外）、#9**；**#2、#3 当前售价、#8 促销截止日期**仍存在动态页面无法从公开抓取结果完全定死的问题。
+
+官方核验入口：[Z.ai Coding Plan](https://z.ai/subscribe?utm_source=chatgpt.com)、[TRAE Pricing](https://www.trae.ai/pricing?utm_source=chatgpt.com)、[xAI Plans & Pricing](https://x.ai/pricing)、[Google Gemini API Pricing](https://ai.google.dev/gemini-api/docs/pricing)、[MiniMax Token Plan](https://platform.minimax.io/docs/guides/pricing-token-plan)、[Kimi Code](https://www.kimi.com/code)、[xAI API Pricing](https://docs.x.ai/developers/pricing)。
+
+[1]: https://zcode.z.ai/en?utm_source=chatgpt.com "ZCode | Official Harness for GLM-5.3"
+[2]: https://zcode.z.ai/en/docs/configuration?utm_source=chatgpt.com "Connect Models | ZCode Docs"
+[3]: https://www.trae.ai/blog/trae_membership_0213?utm_source=chatgpt.com "Upgrading TRAE Membership Benefits | TRAE - Collaborate with Intelligence"
+[4]: https://www.trae.ai/pricing "Pricing | TRAE - Collaborate with Intelligence"
+[5]: https://x.ai/pricing "Pricing: Compare Grok Plans | SpaceXAI"
+[6]: https://ai.google.dev/gemini-api/docs/pricing "Gemini Developer API pricing  |  Gemini API  |  Google AI for Developers"
+[7]: https://platform.minimax.io/docs/guides/pricing-token-plan "Token Plan - MiniMax API Docs"
+[8]: https://platform.minimax.io/docs/token-plan/migration "Token Plan Migration Guide - MiniMax API Docs"
+[9]: https://www.kimi.com/code/docs/kimi-code/error-reference.html?utm_source=chatgpt.com "错误参考（Error Reference） | Kimi Code 文档"
+[10]: https://www.kimi.com/help/membership/membership-update-rules?utm_source=chatgpt.com "Kimi 会员权益更新规则说明 - Kimi 帮助中心"
+[11]: https://docs.x.ai/developers/pricing "API Pricing | SpaceXAI Docs"
+
+
+
+
+
+已按 **2026-09-21 官方页面**逐项查证。结果如下，动态订阅页已切换到月付选项核对。
+
+| #                      | 查证结论                                                                                                                                                                                                     | 建议回填                                                              |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **1 GLM 国际价**          | Lite／Pro／Max 为 **$18／80／168 每月**。[官方购买页](https://z.ai/subscribe)                                                                                                                                         | 将 72／160 改为 **80／168**。                                           |
+| **2 GLM 国内价**          | “连续包月”明确显示 **¥118／538／1,078**，与 xlsx 一致。[官方购买页](https://bigmodel.cn/glm-coding)                                                                                                                          | 撤销“xlsx 疑似过时”的判断；**49／149／469 不应作为现行公开月价**。                       |
+| **3 TRAE**             | 连续月付 Lite／Pro／Pro+／Ultra 为 **$3／10／30／100**；单买一个月为 **$4.5／15／45／150**。Pro+ 确实存在。Pro 卡片的 $0 属于符合条件的新用户试用。[官方定价页](https://www.trae.ai/pricing)                                                             | 补齐 Pro+ **$30/月**；20／60／200 与本次现售页不符。区分连续订阅与单月购买。                 |
+| **4 SuperGrok**        | 动态购买页已明确显示 SuperGrok／Plus／Heavy：**$30／100／300 每月**。[官方购买页](https://grok.com/plans)                                                                                                                       | 三档金额均可由“未核”改为**官方已证实**。                                           |
+| **5 Gemini 3.5 Flash** | 当前官方价格表未列出这个准确型号；有 **3.5 Flash-Lite**，也有 **3.8 Flash**。3.8 Flash 标准输入／输出当前为 **$0.75／3.75 每百万 tokens**，优惠截至 2026-12-31。[官方价格表](https://ai.google.dev/gemini-api/docs/pricing)                             | 将“3.5 Flash $1.50／9.00”移出已核实数据，保留待证记录；不能据此断言该型号从未存在，也不能直接改名为 3.8。 |
+| **6 MiniMax 国际旧档**     | 当前公开月价为 **$22／55／132**。迁移公告保留存量 Plus $20、Max $50 的签约价，并描述迁移至 Ultra $120。[现售价格](https://platform.minimax.io/docs/guides/pricing-token-plan)、[迁移公告](https://platform.minimax.io/docs/token-plan/migration) | 新购价采用 **22／55／132**；20／50／120 单列存量／迁移口径。未证实新用户仍可按旧价购买。            |
+| **7 Kimi 额度**          | **新套餐：5 小时滚动＋月度总量，无周限额；旧套餐：仍有周限额**，可继续续订。[官方权益说明](https://www.kimi.com/code/docs/en/kimi-code/membership.html) 本次中文购买页显示美元月价 **19／39／99／199**，未显示人民币订阅价。[购买页](https://www.kimi.com/membership/pricing)   | 按新旧套餐分开记录，不能统一写“取消周限额”。人民币订阅价仍标**未核实**。                           |
+| **8 GLM-5.3-Flash 促销** | 卡片与详细价目表均为输入／缓存读／输出 **¥0.8／0.23／2.8 每百万 tokens**；同站 FAQ 仍写五折 **0.4／0.115／1.4**，未找到有效期或截止日期。[价格页](https://bigmodel.cn/pricing)、[详细价目表](https://docs.bigmodel.cn/cn/guide/start/pricing)                   | 保留标准价；促销价另列为**官方 FAQ 有提及、当前有效性未核实**，暂不覆盖标准价。                      |
+| **9 xAI 美国端点**         | 官方明确规定输入、输出、缓存输入及长上下文 token 费率 **×1.1**；但美国端点目前只列 **grok-4.6**。[官方说明](https://docs.x.ai/developers/pricing)                                                                                              | 标注“**按官方倍率计算**”有依据；若相关行属于其他模型，不能直接套用为可用的美国端点价格。                   |
+
+**尚未核实的部分**主要是：GLM 五折促销有效期、Kimi 人民币订阅价，以及 MiniMax 旧价能否供新用户购买。
+
+本次完成查证，未改动原文件；尚未收到待回填的 `data-expansion-2026-09-21.md`。
+

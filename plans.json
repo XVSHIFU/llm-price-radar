@@ -1,0 +1,572 @@
+{
+  "_meta": {
+    "note": "订阅计划数据，来自参考实现内嵌数据（2026-09-20 快照）。价格以官方订阅页为准。",
+    "snapshot": "2026-09-20",
+    "updated_at": "2026-09-21",
+    "content_hash": "8a673bfecf3a88df8b4f3fb70f2b4a14a2b866556443dca0265a0010e8565ff3"
+  },
+  "plans": [
+    {
+      "id": "glm-lite",
+      "name": "GLM Coding Plan Lite",
+      "provider": "Z.AI",
+      "kind": "Coding Plan",
+      "tools": "ZCode / Claude Code / Cline / OpenCode 等 20+",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 18,
+          "quota": "2,000 积分 / 5 小时 · 每周 10,000 积分",
+          "note": "积分按输入、缓存输入、输出及工具调用分别折算；不是固定请求数。",
+          "source": "glm-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 118,
+          "quota": "2,000 积分 / 5 小时 · 每周 10,000 积分",
+          "note": "积分制（2026-07-30 改版）。非高峰时段 5 折消耗积分。",
+          "source": "glm-plan",
+          "promo": null
+        }
+      }
+    },
+    {
+      "id": "glm-pro",
+      "name": "GLM Coding Plan Pro",
+      "provider": "Z.AI",
+      "kind": "Coding Plan",
+      "tools": "ZCode / Claude Code / Cline / OpenCode 等 20+",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 80,
+          "quota": "约 12,000 积分 / 5 小时 · 每周 60,000 积分",
+          "note": "积分制；具体额度与限制以官方订阅页为准。",
+          "source": "glm-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 538,
+          "quota": "约 12,000 积分 / 5 小时",
+          "note": "积分制；连包季 8 折、连包年 7 折（年付约 ¥430/月）。非高峰 5 折。",
+          "source": "glm-plan",
+          "promo": null
+        }
+      }
+    },
+    {
+      "id": "glm-max",
+      "name": "GLM Coding Plan Max",
+      "provider": "Z.AI",
+      "kind": "Coding Plan",
+      "tools": "ZCode / Claude Code / Cline / OpenCode 等 20+",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 168,
+          "quota": "约 28,000 积分 / 5 小时",
+          "note": "积分制；具体额度与限制以官方订阅页为准。",
+          "source": "glm-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 1078,
+          "quota": "约 28,000 积分 / 5 小时",
+          "note": "积分制；非高峰 5 折。具体额度与限制以官方订阅页为准。",
+          "source": "glm-plan",
+          "promo": null
+        }
+      }
+    },
+    {
+      "id": "codex-plus",
+      "name": "ChatGPT Plus",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "price": 20,
+      "kind": "Codex 订阅",
+      "quota": "动态用量额度",
+      "tools": "Codex · CLI / IDE / Web",
+      "note": "按任务、上下文与所用模型消耗额度，本地与云端共享；不等于 API 余额。",
+      "source": "openai-plan",
+      "region": "国际"
+    },
+    {
+      "id": "claude-pro",
+      "name": "Claude Pro",
+      "provider": "Anthropic",
+      "currency": "USD",
+      "price": 20,
+      "kind": "Claude Code 订阅",
+      "quota": "共享用量上限",
+      "tools": "Claude Code / Claude",
+      "note": "月付价；年付总额为 $200。使用量限制适用，订阅不代表无限 API token。",
+      "source": "claude-plan",
+      "region": "国际"
+    },
+    {
+      "id": "copilot-pro",
+      "name": "Copilot Pro",
+      "provider": "GitHub",
+      "currency": "USD",
+      "price": 10,
+      "kind": "IDE / Agent 套餐",
+      "quota": "$15 / 月 AI Credits",
+      "tools": "GitHub / IDE / CLI",
+      "note": "包含 $10 基础额度与当前 $5 灵活额度；灵活额度可能调整。超额另付，非现金余额。",
+      "source": "copilot-plan",
+      "region": "国际"
+    },
+    {
+      "id": "copilot-pro-plus",
+      "name": "Copilot Pro+",
+      "provider": "GitHub",
+      "currency": "USD",
+      "price": 39,
+      "kind": "IDE / Agent 套餐",
+      "quota": "$70 / 月 AI Credits",
+      "tools": "GitHub / IDE / CLI",
+      "note": "包含 $39 基础额度与当前 $31 灵活额度；灵活额度可能调整，追加用量需单独预算。",
+      "source": "copilot-plan",
+      "region": "国际"
+    },
+    {
+      "id": "copilot-max",
+      "name": "Copilot Max",
+      "provider": "GitHub",
+      "currency": "USD",
+      "price": 100,
+      "kind": "IDE / Agent 套餐",
+      "quota": "$200 / 月 AI Credits",
+      "tools": "GitHub / IDE / CLI",
+      "note": "包含 $100 基础额度与当前 $100 灵活额度；灵活额度可能调整。",
+      "source": "copilot-plan",
+      "region": "国际"
+    },
+    {
+      "id": "minimax-plus",
+      "name": "MiniMax Plus",
+      "provider": "MiniMax",
+      "kind": "Token Plan",
+      "tools": "MiniMax CLI / Claude Code / Codex / Cursor / TRAE 等",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 22,
+          "quota": "5 小时滚动 + 每周额度",
+          "note": "M3/M2.7 及支持的模型共享池；订阅 Key 与 PAYG Key 不互通，额度耗尽可另购 Credits。",
+          "source": "minimax-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 49,
+          "quota": "5 小时固定窗口 + 周窗口",
+          "note": "M3/M2.7/M2.5；官方约 3–4 个 Agent 参考。",
+          "source": "minimax-plan"
+        }
+      }
+    },
+    {
+      "id": "minimax-max",
+      "name": "MiniMax Max",
+      "provider": "MiniMax",
+      "kind": "Token Plan",
+      "tools": "MiniMax CLI / Claude Code / Codex / Cursor / TRAE 等",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 55,
+          "quota": "5 小时滚动 + 每周额度",
+          "note": "M3/M2.7 及支持的模型共享池；订阅 Key 与 PAYG Key 不互通，额度耗尽可另购 Credits。",
+          "source": "minimax-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 119,
+          "quota": "5 小时固定窗口 + 周窗口",
+          "note": "M3/M2.7/M2.5；官方约 4–5 个 Agent 参考。",
+          "source": "minimax-plan"
+        }
+      }
+    },
+    {
+      "id": "minimax-ultra",
+      "name": "MiniMax Ultra",
+      "provider": "MiniMax",
+      "kind": "Token Plan",
+      "tools": "MiniMax CLI / Claude Code / Codex / Cursor / TRAE 等",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 132,
+          "quota": "5 小时滚动 + 每周额度",
+          "note": "M3/M2.7 及支持的模型共享池；订阅 Key 与 PAYG Key 不互通，额度耗尽可另购 Credits。",
+          "source": "minimax-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 469,
+          "quota": "5 小时固定窗口 + 周窗口",
+          "note": "M3/M2.7/M2.5；官方约 6–7 个 Agent 参考。",
+          "source": "minimax-plan"
+        }
+      }
+    },
+    {
+      "id": "bailian-pro",
+      "name": "百炼 Coding Plan Pro",
+      "provider": "阿里云",
+      "currency": "CNY",
+      "price": 200,
+      "kind": "Coding Plan",
+      "quota": "6,000 次 / 5 小时",
+      "tools": "Claude Code / Cline / Qwen Code 等",
+      "note": "同时受 45,000 次/周、90,000 次/月限制。一次提问可能消耗多次模型调用；仅限允许的交互编程工具，不能用于通用后端或批量脚本。",
+      "promo": "新客首月 ¥39.90；续费 ¥200/月，限量，以下单页为准。",
+      "source": "aliyun-plan",
+      "region": "国内"
+    },
+    {
+      "id": "codex-pro-5x",
+      "name": "ChatGPT Pro 5×",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "price": 100,
+      "region": "国际",
+      "kind": "Codex 订阅",
+      "quota": "Plus 的 5× 用量档",
+      "tools": "Codex · CLI / IDE / Web",
+      "note": "相对 ChatGPT Plus 的 5× 用量档。按任务、上下文与所用模型消耗额度，本地与云端共享；不等于 API 余额。",
+      "source": "openai-plan"
+    },
+    {
+      "id": "codex-pro-20x",
+      "name": "ChatGPT Pro 20×",
+      "provider": "OpenAI",
+      "currency": "USD",
+      "price": 200,
+      "region": "国际",
+      "kind": "Codex 订阅",
+      "quota": "Plus 的 20× 用量档",
+      "tools": "Codex · CLI / IDE / Web",
+      "note": "相对 ChatGPT Plus 的 20× 用量档。自 2026-09-10 起暂停新购与升级，已有订阅仍正常续费。",
+      "source": "openai-plan"
+    },
+    {
+      "id": "claude-max-5x",
+      "name": "Claude Max 5×",
+      "provider": "Anthropic",
+      "currency": "USD",
+      "price": 100,
+      "region": "国际",
+      "kind": "Claude Code 订阅",
+      "quota": "Claude Pro 的 5× 用量档",
+      "tools": "Claude Code / Claude",
+      "note": "相对 Claude Pro 的 5× 用量档。网页订阅价格；使用量限制适用，订阅不代表无限 API token。",
+      "source": "claude-plan"
+    },
+    {
+      "id": "claude-max-20x",
+      "name": "Claude Max 20×",
+      "provider": "Anthropic",
+      "currency": "USD",
+      "price": 200,
+      "region": "国际",
+      "kind": "Claude Code 订阅",
+      "quota": "Claude Pro 的 20× 用量档",
+      "tools": "Claude Code / Claude",
+      "note": "相对 Claude Pro 的 20× 用量档。网页订阅价格；使用量限制适用，另有使用边界。",
+      "source": "claude-plan"
+    },
+    {
+      "id": "kimi-code-plus",
+      "name": "Kimi Code Plus",
+      "provider": "Moonshot",
+      "currency": "USD",
+      "price": 19,
+      "kind": "Kimi Code 订阅",
+      "quota": "5 小时滚动 + 月度共享额度",
+      "tools": "Kimi Code",
+      "note": "新套餐无每周额度限制。支持 K3；Pro 起 1M 上下文及 HighSpeed。",
+      "source": "kimi-plan",
+      "region": "国际"
+    },
+    {
+      "id": "kimi-code-pro",
+      "name": "Kimi Code Pro",
+      "provider": "Moonshot",
+      "currency": "USD",
+      "price": 39,
+      "kind": "Kimi Code 订阅",
+      "quota": "5 小时滚动 + 月度共享额度",
+      "tools": "Kimi Code",
+      "note": "新套餐无每周额度限制。",
+      "source": "kimi-plan",
+      "region": "国际"
+    },
+    {
+      "id": "kimi-code-max",
+      "name": "Kimi Code Max",
+      "provider": "Moonshot",
+      "currency": "USD",
+      "price": 99,
+      "kind": "Kimi Code 订阅",
+      "quota": "5 小时滚动 + 月度共享额度",
+      "tools": "Kimi Code",
+      "note": "新套餐无每周额度限制。",
+      "source": "kimi-plan",
+      "region": "国际"
+    },
+    {
+      "id": "kimi-code-ultra",
+      "name": "Kimi Code Ultra",
+      "provider": "Moonshot",
+      "currency": "USD",
+      "price": 199,
+      "kind": "Kimi Code 订阅",
+      "quota": "5 小时滚动 + 月度共享额度",
+      "tools": "Kimi Code",
+      "note": "新套餐无每周额度限制。",
+      "source": "kimi-plan",
+      "region": "国际"
+    },
+    {
+      "id": "codebuddy-pro",
+      "name": "CodeBuddy Pro",
+      "provider": "腾讯",
+      "currency": "USD",
+      "price": 10,
+      "kind": "CodeBuddy 订阅",
+      "quota": "1,000 积分 / 月",
+      "tools": "CodeBuddy",
+      "note": "年付 $96（折合 $8/月）。积分当月有效、不累积结转。",
+      "source": "codebuddy-plan",
+      "region": "国际"
+    },
+    {
+      "id": "codebuddy-team",
+      "name": "CodeBuddy Team",
+      "provider": "腾讯",
+      "currency": "USD",
+      "price": 40,
+      "kind": "CodeBuddy 订阅",
+      "quota": "1,000 积分 / 坐席·月",
+      "tools": "CodeBuddy",
+      "note": "年付 $480/坐席（$40/月）。团队公共池。",
+      "source": "codebuddy-plan",
+      "region": "国际"
+    },
+    {
+      "id": "trae-lite",
+      "name": "TRAE Lite",
+      "provider": "字节",
+      "currency": "USD",
+      "price": 3,
+      "kind": "TRAE 订阅",
+      "quota": "连续月付",
+      "tools": "TRAE",
+      "note": "含 $5 基础用量 + bonus。单买一月 $4.5。",
+      "source": "trae-plan",
+      "region": "国际"
+    },
+    {
+      "id": "trae-pro",
+      "name": "TRAE Pro",
+      "provider": "字节",
+      "currency": "USD",
+      "price": 10,
+      "kind": "TRAE 订阅",
+      "quota": "连续月付",
+      "tools": "TRAE",
+      "note": "SOLO 模式包含在 Pro 内，不单独收费。单买一月 $15。",
+      "source": "trae-plan",
+      "region": "国际"
+    },
+    {
+      "id": "trae-pro-plus",
+      "name": "TRAE Pro+",
+      "provider": "字节",
+      "currency": "USD",
+      "price": 30,
+      "kind": "TRAE 订阅",
+      "quota": "连续月付",
+      "tools": "TRAE",
+      "note": "更高额度。单买一月 $45。",
+      "source": "trae-plan",
+      "region": "国际"
+    },
+    {
+      "id": "trae-ultra",
+      "name": "TRAE Ultra",
+      "provider": "字节",
+      "currency": "USD",
+      "price": 100,
+      "kind": "TRAE 订阅",
+      "quota": "连续月付",
+      "tools": "TRAE",
+      "note": "最高档。单买一月 $150。",
+      "source": "trae-plan",
+      "region": "国际"
+    },
+    {
+      "id": "supergrok",
+      "name": "SuperGrok",
+      "provider": "xAI",
+      "currency": "USD",
+      "price": 30,
+      "kind": "SuperGrok 订阅",
+      "quota": "Grok 4.6 + 编码工具",
+      "tools": "grok.com / iOS / Android",
+      "note": "官方购买页证实（2026-09-21）。",
+      "source": "xai-plan",
+      "region": "国际"
+    },
+    {
+      "id": "supergrok-plus",
+      "name": "SuperGrok Plus",
+      "provider": "xAI",
+      "currency": "USD",
+      "price": 100,
+      "kind": "SuperGrok 订阅",
+      "quota": "更高用量",
+      "tools": "grok.com / iOS / Android",
+      "note": "1080p 视频、优先访问、Grok Build。",
+      "source": "xai-plan",
+      "region": "国际"
+    },
+    {
+      "id": "supergrok-heavy",
+      "name": "SuperGrok Heavy",
+      "provider": "xAI",
+      "currency": "USD",
+      "price": 300,
+      "kind": "SuperGrok 订阅",
+      "quota": "Grok Build agent、Grok 4 Heavy",
+      "tools": "grok.com / iOS / Android",
+      "note": "官方购买页证实（2026-09-21）。",
+      "source": "xai-plan",
+      "region": "国际"
+    },
+    {
+      "id": "google-ai-pro",
+      "name": "Google AI Pro",
+      "provider": "Google",
+      "currency": "USD",
+      "price": 19.99,
+      "kind": "Google AI 订阅",
+      "quota": "5TB 存储 · Gemini 用量 4×",
+      "tools": "Gemini App / Code Assist / CLI",
+      "note": "含 Gemini Code Assist 与 Gemini CLI。",
+      "source": "google-plan",
+      "region": "国际"
+    },
+    {
+      "id": "google-ai-ultra-5x",
+      "name": "Google AI Ultra 5×",
+      "provider": "Google",
+      "currency": "USD",
+      "price": 99.99,
+      "kind": "Google AI 订阅",
+      "quota": "20TB 存储起 · 用量 5×",
+      "tools": "Gemini App / Code Assist / CLI",
+      "note": "I/O 2026 新入口价。",
+      "source": "google-plan",
+      "region": "国际"
+    },
+    {
+      "id": "google-ai-ultra-20x",
+      "name": "Google AI Ultra 20×",
+      "provider": "Google",
+      "currency": "USD",
+      "price": 200,
+      "kind": "Google AI 订阅",
+      "quota": "用量 20×",
+      "tools": "Gemini App / Code Assist / CLI",
+      "note": "原 $250 降至 $200。",
+      "source": "google-plan",
+      "region": "国际"
+    },
+    {
+      "id": "qoder-pro",
+      "name": "Qoder Pro",
+      "provider": "阿里云",
+      "kind": "Qoder 订阅",
+      "tools": "Qoder",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 20,
+          "quota": "2,000 Credits / 月",
+          "note": "半价活动已于 2026-04-30 结束，当前标准价。",
+          "source": "qoder-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 59,
+          "quota": "2,000 Credits / 月",
+          "note": "Credits 按模型消耗，不等于请求数。",
+          "source": "qoder-plan"
+        }
+      }
+    },
+    {
+      "id": "qoder-plus",
+      "name": "Qoder Pro+",
+      "provider": "阿里云",
+      "kind": "Qoder 订阅",
+      "tools": "Qoder",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 60,
+          "quota": "6,000 Credits / 月",
+          "note": "半价活动已于 2026-04-30 结束。",
+          "source": "qoder-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 169,
+          "quota": "6,000 Credits / 月",
+          "note": "Credits 按模型消耗，不等于请求数。",
+          "source": "qoder-plan"
+        }
+      }
+    },
+    {
+      "id": "qoder-ultra",
+      "name": "Qoder Ultra",
+      "provider": "阿里云",
+      "kind": "Qoder 订阅",
+      "tools": "Qoder",
+      "regions": {
+        "国际": {
+          "currency": "USD",
+          "price": 200,
+          "quota": "20,000 Credits / 月",
+          "note": "半价活动已于 2026-04-30 结束。",
+          "source": "qoder-plan"
+        },
+        "国内": {
+          "currency": "CNY",
+          "price": 559,
+          "quota": "20,000 Credits / 月",
+          "note": "Credits 按模型消耗，不等于请求数。",
+          "source": "qoder-plan"
+        }
+      }
+    },
+    {
+      "id": "qoder-teams",
+      "name": "Qoder Teams",
+      "provider": "阿里云",
+      "currency": "USD",
+      "price": 40,
+      "kind": "Qoder 订阅",
+      "quota": "3,000 Credits / 坐席·月",
+      "tools": "Qoder",
+      "note": "团队公共池；无国内对应档。",
+      "source": "qoder-plan",
+      "region": "国际"
+    }
+  ]
+}

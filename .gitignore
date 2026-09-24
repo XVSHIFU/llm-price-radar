@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+tmp.txt
+reports/
+docs/fetch-snapshots/
+docs/fetch-parsed/
+docs/preview/
+.DS_Store
+

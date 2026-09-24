@@ -1,0 +1,234 @@
+{
+  "version": "1.0",
+  "name": "llm-price-radar",
+  "description": "模型 API 与订阅计划价格目录；原币种，未做汇率换算。",
+  "instructions": "相对 URL 以本 manifest 所在目录为基准。价格来自多批快照；snapshot 不是全库最近核验日期。模型单价为每百万 token，storage 为每百万 token·小时；null 不等于免费。regions 为独立地区报价。source 对应 sources。content_hash 为去掉自身 hash 字段后的规范 JSON SHA-256。source_status 提供逐来源抓取状态；套餐由人工维护。",
+  "snapshot": "2026-09-24",
+  "plans_snapshot": "2026-09-20",
+  "endpoints": {
+    "data_url": "./data.json",
+    "plans_url": "./plans.json",
+    "manifest_url": "./llm-price-manifest.json"
+  },
+  "counts": {
+    "models": 344,
+    "plans": 36,
+    "sources": 23,
+    "providers": 10
+  },
+  "sources": [
+    {
+      "id": "aliyun-api",
+      "name": "阿里云百炼 · 模型定价",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "scope": "Qwen 全系人民币价与缓存"
+    },
+    {
+      "id": "aliyun-plan",
+      "name": "阿里云 · Coding Plan",
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "scope": "Pro 月费、请求限制与首月优惠"
+    },
+    {
+      "id": "claude-api",
+      "name": "Anthropic · API 定价",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "scope": "模型价格、5 分钟与 1 小时缓存写入"
+    },
+    {
+      "id": "claude-plan",
+      "name": "Anthropic · Claude 套餐",
+      "url": "https://claude.com/pricing",
+      "scope": "Pro、Max 与 Claude Code 权益"
+    },
+    {
+      "id": "codebuddy-plan",
+      "name": "腾讯 CodeBuddy · 订阅",
+      "url": "https://intl.cloud.tencent.com/zh/document/product/1256/77270",
+      "scope": "Pro/Team 月费与积分"
+    },
+    {
+      "id": "copilot-plan",
+      "name": "GitHub · Copilot 套餐",
+      "url": "https://github.com/features/copilot/plans",
+      "scope": "Pro、Pro+、Max 与 AI Credits"
+    },
+    {
+      "id": "deepseek-api",
+      "name": "DeepSeek · 模型与价格",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "scope": "人民币价格、高峰及空闲时段"
+    },
+    {
+      "id": "glm-api",
+      "name": "智谱 · GLM API 定价（国际）",
+      "url": "https://docs.z.ai/pricing",
+      "scope": "GLM 国际站美元价"
+    },
+    {
+      "id": "glm-plan",
+      "name": "Z.AI · GLM Coding Plan",
+      "url": "https://docs.z.ai/devpack/overview",
+      "scope": "起步价格、积分窗口与适用工具"
+    },
+    {
+      "id": "google-api",
+      "name": "Google · Gemini API",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "scope": "付费 Standard 价格与缓存存储费"
+    },
+    {
+      "id": "google-plan",
+      "name": "Google · AI 订阅",
+      "url": "https://one.google.com/ai-premium",
+      "scope": "AI Pro/Ultra 月费与存储"
+    },
+    {
+      "id": "kimi-api",
+      "name": "Moonshot Kimi · API 定价",
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "scope": "中国站人民币价与国际站美元价"
+    },
+    {
+      "id": "kimi-plan",
+      "name": "Moonshot Kimi Code · 订阅",
+      "url": "https://www.kimi.com/membership/pricing",
+      "scope": "Kimi Code 新套餐（国际美元）"
+    },
+    {
+      "id": "minimax-api",
+      "name": "MiniMax · API 定价",
+      "url": "https://platform.minimaxi.com/docs/guides/pricing",
+      "scope": "国内 M 系列人民币价与国际站美元价"
+    },
+    {
+      "id": "minimax-plan",
+      "name": "MiniMax · Token Plan",
+      "url": "https://platform.minimax.io/docs/token-plan/intro",
+      "scope": "原 Coding Plan 的现行订阅与额度窗口"
+    },
+    {
+      "id": "openai-api",
+      "name": "OpenAI · API 定价",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "scope": "标准处理、输入/输出及缓存价格"
+    },
+    {
+      "id": "openai-plan",
+      "name": "OpenAI · Codex 套餐",
+      "url": "https://learn.chatgpt.com/docs/pricing",
+      "scope": "Plus、Pro 订阅与使用额度"
+    },
+    {
+      "id": "qoder-plan",
+      "name": "通义 Qoder · 订阅",
+      "url": "https://help.aliyun.com/zh/lingma/billing-description",
+      "scope": "Qoder 国际/国内 Credits 套餐"
+    },
+    {
+      "id": "trae-plan",
+      "name": "TRAE · 订阅",
+      "url": "https://www.trae.ai/pricing",
+      "scope": "Lite/Pro/Pro+/Ultra 连续月付"
+    },
+    {
+      "id": "volcengine-api",
+      "name": "火山引擎方舟 · API 定价",
+      "url": "https://docs.volcengine.com/docs/82379/1544106",
+      "scope": "豆包全系人民币价与缓存"
+    },
+    {
+      "id": "xai-api",
+      "name": "xAI · API 定价",
+      "url": "https://docs.x.ai/developers/pricing",
+      "scope": "模型价格与缓存读取；US 端点 ×1.1"
+    },
+    {
+      "id": "xai-plan",
+      "name": "xAI · SuperGrok 订阅",
+      "url": "https://grok.com/plans",
+      "scope": "SuperGrok/Plus/Heavy 月费"
+    },
+    {
+      "id": "zhipu-api",
+      "name": "智谱 · GLM API 定价（国内）",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "scope": "GLM 全系人民币价、缓存存储与命中"
+    }
+  ],
+  "source_status": {
+    "openai-api": {
+      "status": "parsed",
+      "count": 4,
+      "last_attempt": "2026-09-24T05:36:04+00:00",
+      "last_parsed": "2026-09-24T05:36:04+00:00",
+      "review_count": 0
+    },
+    "claude-api": {
+      "status": "failed",
+      "message": "页面已获取，但解析结果为空；保留旧数据",
+      "last_attempt": "2026-09-24T05:36:04+00:00"
+    },
+    "xai-api": {
+      "status": "parsed",
+      "count": 8,
+      "last_attempt": "2026-09-24T05:36:04+00:00",
+      "last_parsed": "2026-09-24T05:36:04+00:00",
+      "review_count": 4
+    },
+    "deepseek-api": {
+      "status": "parsed",
+      "count": 2,
+      "last_attempt": "2026-09-24T05:36:04+00:00",
+      "last_parsed": "2026-09-24T05:36:04+00:00",
+      "review_count": 0
+    },
+    "zhipu-api": {
+      "status": "parsed",
+      "count": 32,
+      "last_attempt": "2026-09-24T05:36:04+00:00",
+      "last_parsed": "2026-09-24T05:36:04+00:00",
+      "review_count": 6
+    },
+    "google-api": {
+      "status": "failed",
+      "message": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "last_attempt": "2026-09-24T05:36:04+00:00"
+    },
+    "kimi-api": {
+      "status": "parsed",
+      "count": 4,
+      "last_attempt": "2026-09-24T05:36:04+00:00",
+      "last_parsed": "2026-09-24T05:36:04+00:00",
+      "review_count": 1
+    },
+    "minimax-api": {
+      "status": "parsed",
+      "count": 10,
+      "last_attempt": "2026-09-24T05:36:04+00:00",
+      "last_parsed": "2026-09-24T05:36:04+00:00",
+      "review_count": 4
+    },
+    "aliyun-api": {
+      "status": "parsed",
+      "count": 241,
+      "last_attempt": "2026-09-24T05:36:04+00:00",
+      "last_parsed": "2026-09-24T05:36:04+00:00",
+      "review_count": 1
+    },
+    "volcengine-api": {
+      "status": "manual",
+      "message": "需要人工维护",
+      "last_attempt": "2026-09-24T05:36:04+00:00"
+    },
+    "zai-api": {
+      "status": "manual",
+      "message": "需要人工维护",
+      "last_attempt": "2026-09-24T05:36:04+00:00"
+    }
+  },
+  "content_hashes": {
+    "models": "d93700d502d4c7f1dc0a37de9d7b7ae9487f4dd6274f5a51605e2acae2828076",
+    "plans": "8a673bfecf3a88df8b4f3fb70f2b4a14a2b866556443dca0265a0010e8565ff3"
+  }
+}

@@ -1,0 +1,84 @@
+name: Update prices and deploy Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 00:37 UTC = 08:37 Asia/Shanghai; scheduled execution is best effort.
+    - cron: '37 0 * * *'
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: '抓取官方价格后发布（关闭时只发布仓库中的数据）'
+        type: boolean
+        default: true
+
+concurrency:
+  group: price-radar-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test update and publishing logic
+        run: python -m unittest discover -s tests -v
+      - name: Refresh prices
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh)
+        run: python fetch_prices.py --apply
+      - name: Upload fetch report and review candidates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fetch-report-${{ github.run_id }}
+          path: reports/
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Build and validate public files
+        run: |
+          python build_site.py --sync
+          python build_site.py
+          python -m unittest discover -s tests -v
+          node tests/check_frontend.cjs
+      - name: Persist successful data snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data.json plans.json index.html llm-price-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish validated price snapshot'
+            git push origin HEAD:main
+          fi
+          # A concurrent human push must not be overwritten or deployed over.
+          test "$(git rev-parse HEAD)" = "$(git ls-remote origin refs/heads/main | cut -f1)"
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy validated artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
