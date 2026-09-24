@@ -168,7 +168,7 @@
       "notes": [
         "使用官方 Standard 档；短/长上下文阈值以对应模型文档为准。未包含 Batch、Flex、Fast 或地域附加费。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "gpt-5.6-sol",
@@ -198,7 +198,7 @@
         "使用官方 Standard 档；短/长上下文阈值以对应模型文档为准。未包含 Batch、Flex、Fast 或地域附加费。",
         "Sol 当前促销价至少持续至 2026-11-21；未将促销价视为永久承诺。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "gpt-5.6-terra",
@@ -280,7 +280,7 @@
       "notes": [
         "官方缓存命中 0.025× 基价（$10×0.025=$0.25）。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-opus-5",
@@ -308,7 +308,7 @@
       "notes": [
         "缓存命中 0.1× 基价（$5×0.1=$0.5）。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-sonnet-5",
@@ -336,7 +336,7 @@
       "notes": [
         "官方注：$2/$10 为发布时介绍价（introductory pricing），后续可能调整。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-haiku-4.5",
@@ -364,7 +364,7 @@
       "notes": [
         "官方表确认。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "gemini-3.8-flash",
@@ -388,7 +388,8 @@
         "当前价格截至 2026-12-31；2027-01-01 起输入、输出、缓存读取及存储费均按官方已公告价格调整。",
         "显式缓存存储另计 $0.50 / 百万 token·小时。官方未在此表单列写入单价；“未单列”不等于免费。",
         "输出计入思考 token；检索、音视频及其他工具费不包含在本版试算中。"
-      ]
+      ],
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "gemini-2.5-pro",
@@ -418,7 +419,8 @@
       "notes": [
         "Standard 付费档；输入超过 200K 时，输出单价也随档位变化。",
         "显式缓存存储另计 $4.50 / 百万 token·小时。未单列写入单价，不代表免费。"
-      ]
+      ],
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "gemini-2.5-flash-lite",
@@ -440,7 +442,8 @@
       "notes": [
         "此处为文本 Standard 付费档，不套用免费层或 Batch 折扣。",
         "显式缓存存储另计 $1 / 百万 token·小时。未单列写入单价，不代表免费。"
-      ]
+      ],
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "deepseek-flash",
@@ -471,7 +474,7 @@
         "高峰：北京时间周一至周五 9:00–12:00、14:00–18:00，中国法定节假日除外；其余为半价空闲时段。",
         "价格为人民币，未做汇率换算。官方只列缓存命中与未命中输入，未单列写入费。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "grok-4.6",
@@ -802,7 +805,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-09-24T08:00:12+00:00"
+          "last_checked_at": "2026-09-24T10:03:45+00:00"
         }
       },
       "notes": [
@@ -849,7 +852,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-09-24T08:00:12+00:00"
+          "last_checked_at": "2026-09-24T10:03:45+00:00"
         }
       },
       "notes": [
@@ -1175,22 +1178,26 @@
       "rates": [
         {
           "label": "提示词 ≤ 200K",
-          "input": 2,
-          "output": 12,
+          "input": 2.0,
+          "output": 12.0,
           "read": 0.2,
-          "write": null
+          "write": null,
+          "storage": 4.5
         },
         {
           "label": "提示词 > 200K",
-          "input": 4,
-          "output": 18,
+          "input": 4.0,
+          "output": 18.0,
           "read": 0.4,
-          "write": null
+          "write": null,
+          "storage": 4.5
         }
       ],
       "notes": [
         "Preview 型号。"
-      ]
+      ],
+      "price_updated_at": "2026-09-24T10:03:45+00:00",
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "minimax-m2.1",
@@ -1404,7 +1411,7 @@
       "notes": [
         "官方表确认 5m/1h 缓存写价；Opus 5 现售。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-sonnet-4.6",
@@ -1432,7 +1439,7 @@
       "notes": [
         "Sonnet 5 现售。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-mythos-5.1",
@@ -1460,7 +1467,7 @@
       "notes": [
         "官方缓存命中 0.025× 基价；limited availability。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-opus-5.5",
@@ -1488,7 +1495,7 @@
       "notes": [
         "官方缓存命中 0.05× 基价（$4×0.05=$0.2）。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-opus-4.7",
@@ -1516,7 +1523,7 @@
       "notes": [
         "官方表确认 5m/1h 缓存写价。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-opus-4.6",
@@ -1544,7 +1551,7 @@
       "notes": [
         "官方表确认 5m/1h 缓存写价。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-opus-4.5",
@@ -1572,7 +1579,7 @@
       "notes": [
         "官方表确认 5m/1h 缓存写价。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-sonnet-4.5",
@@ -1600,7 +1607,7 @@
       "notes": [
         "官方表确认。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-fable-5",
@@ -1628,7 +1635,7 @@
       "notes": [
         "Fable 5 缓存命中 0.1× 标准（区别于 5.1 的 0.025×）。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-mythos-5",
@@ -1656,7 +1663,7 @@
       "notes": [
         "Mythos 5 缓存命中 0.1× 标准；limited availability。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "gpt-6-sol",
@@ -1683,7 +1690,7 @@
       "notes": [
         "来源 developers.openai.com/api/docs/pricing（取标准处理档；Fast/Batch/Flex 档未取）。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "gpt-6-luna",
@@ -1710,7 +1717,7 @@
       "notes": [
         "来源 developers.openai.com/api/docs/pricing（取标准处理档；Fast/Batch/Flex 档未取）。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-opus-4.1",
@@ -1737,7 +1744,7 @@
       "notes": [
         "来源 platform.claude.com/docs/en/about-claude/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-opus-4",
@@ -1764,7 +1771,7 @@
       "notes": [
         "来源 platform.claude.com/docs/en/about-claude/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-sonnet-4",
@@ -1791,7 +1798,7 @@
       "notes": [
         "来源 platform.claude.com/docs/en/about-claude/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "claude-haiku-3.5",
@@ -1818,7 +1825,7 @@
       "notes": [
         "来源 platform.claude.com/docs/en/about-claude/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "grok-4.7",
@@ -1845,7 +1852,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "grok-4.20-multi-agent-0309",
@@ -1872,7 +1879,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "grok-4.20-0309-reasoning",
@@ -1899,7 +1906,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "grok-4.20-0309-non-reasoning",
@@ -1926,7 +1933,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-5-2-cn",
@@ -1946,7 +1953,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-5-1-cn",
@@ -1966,7 +1973,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-5-turbo-cn",
@@ -1986,7 +1993,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-5-cn",
@@ -2006,7 +2013,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-5-air-cn",
@@ -2026,7 +2033,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-7-flashx-cn",
@@ -2046,7 +2053,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-plus-cn",
@@ -2066,7 +2073,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-air-250414-cn",
@@ -2086,7 +2093,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-airx-cn",
@@ -2106,7 +2113,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-long-cn",
@@ -2126,7 +2133,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-assistant-cn",
@@ -2146,7 +2153,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-z1-air-cn",
@@ -2166,7 +2173,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-z1-airx-cn",
@@ -2186,7 +2193,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-z1-flashx-cn",
@@ -2206,7 +2213,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-flashx-250414-cn",
@@ -2226,7 +2233,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-ocr-cn",
@@ -2246,7 +2253,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-5v-turbo-cn",
@@ -2266,7 +2273,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-6v-cn",
@@ -2286,7 +2293,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-6v-flashx-cn",
@@ -2306,7 +2313,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-5v-cn",
@@ -2326,7 +2333,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4v-plus-0111-cn",
@@ -2346,7 +2353,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "glm-4-1v-thinking-flashx-cn",
@@ -2366,7 +2373,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "minimax-m3-512k-tokens",
@@ -2393,7 +2400,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "minimax-m2.7-highspeed",
@@ -2413,7 +2420,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "minimax-m2.5-highspeed",
@@ -2433,7 +2440,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "minimax-m2.1-highspeed",
@@ -2453,7 +2460,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "minimax-h3-context-ir",
@@ -2473,7 +2480,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "api-vlm",
@@ -2493,7 +2500,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.8-max-prime",
@@ -2513,7 +2520,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.8-max-batch",
@@ -2533,7 +2540,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.8-max-0902",
@@ -2553,7 +2560,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-max-qwen3.7-max-2026-05-20-batch",
@@ -2573,7 +2580,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-max-2026-06-08",
@@ -2593,7 +2600,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-max-2026-05-20",
@@ -2613,7 +2620,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-max-preview-qwen3.7-max-2026-05-17",
@@ -2633,7 +2640,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-max-2026-05-17",
@@ -2653,7 +2660,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-max-preview",
@@ -2673,7 +2680,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-max-qwen3-max-2026-01-23-batch",
@@ -2693,7 +2700,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-max-2026-01-23",
@@ -2713,7 +2720,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-max-2025-09-23",
@@ -2733,7 +2740,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-max-preview",
@@ -2753,7 +2760,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-max",
@@ -2773,7 +2780,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-max-qwen3.7-max-2026-05-20",
@@ -2793,7 +2800,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-max",
@@ -2813,7 +2820,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-max-qwen3-max-2026-01-23",
@@ -2833,7 +2840,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-max-batch",
@@ -2853,7 +2860,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-plus-qwen3.7-plus-2026-05-26-batch",
@@ -2873,7 +2880,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-plus-2026-05-26",
@@ -2893,7 +2900,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-plus-qwen3.6-plus-2026-04-02",
@@ -2913,7 +2920,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-plus-2026-04-02",
@@ -2933,7 +2940,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-plus-qwen3.5-plus-2026-02-15",
@@ -2953,7 +2960,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-plus-2026-04-20",
@@ -2973,7 +2980,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-plus-2026-02-15",
@@ -2993,7 +3000,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-qwen-plus-2025-12-01-batch",
@@ -3013,7 +3020,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-latest-batch",
@@ -3033,7 +3040,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2025-12-01",
@@ -3053,7 +3060,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2025-09-11",
@@ -3073,7 +3080,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2025-07-28",
@@ -3093,7 +3100,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2025-07-14",
@@ -3113,7 +3120,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2025-04-28",
@@ -3133,7 +3140,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2025-01-25",
@@ -3153,7 +3160,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2025-01-12",
@@ -3173,7 +3180,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-2024-12-20",
@@ -3193,7 +3200,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-plus-qwen3.7-plus-2026-05-26",
@@ -3213,7 +3220,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-plus",
@@ -3233,7 +3240,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-qwen-plus-2025-12-01",
@@ -3253,7 +3260,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus",
@@ -3273,7 +3280,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-latest",
@@ -3293,7 +3300,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.8-flash",
@@ -3313,7 +3320,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-flash-qwen3.7-flash-2026-07-15-batch",
@@ -3333,7 +3340,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-flash-2026-07-15",
@@ -3353,7 +3360,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-flash-qwen3.6-flash-2026-04-16-batch",
@@ -3373,7 +3380,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-flash-2026-04-16",
@@ -3393,7 +3400,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-flash-qwen3.5-flash-2026-02-23-batch",
@@ -3413,7 +3420,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-flash-2026-02-23",
@@ -3433,7 +3440,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-flash-qwen-flash-2025-07-28-batch",
@@ -3453,7 +3460,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-flash-2025-07-28",
@@ -3473,7 +3480,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-flash-qwen3.7-flash-2026-07-15",
@@ -3493,7 +3500,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-flash-qwen3.6-flash-2026-04-16",
@@ -3513,7 +3520,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-flash",
@@ -3533,7 +3540,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-flash-qwen3.5-flash-2026-02-23",
@@ -3553,7 +3560,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-flash",
@@ -3573,7 +3580,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-turbo",
@@ -3593,7 +3600,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-turbo-batch",
@@ -3613,7 +3620,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwq-plus",
@@ -3652,7 +3659,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-long-latest",
@@ -3672,7 +3679,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-long-2025-01-25",
@@ -3692,7 +3699,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-plus-qwen3.5-omni-plus-2026-03-15",
@@ -3712,7 +3719,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-plus-2026-03-15",
@@ -3732,7 +3739,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-flash-qwen3.5-omni-flash-2026-03-15",
@@ -3752,7 +3759,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-flash-2026-03-15",
@@ -3772,7 +3779,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-omni-flash-qwen3-omni-flash-2025-12-01",
@@ -3792,7 +3799,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-omni-flash-2025-12-01",
@@ -3812,7 +3819,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-omni-flash-2025-09-15",
@@ -3832,7 +3839,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-omni-turbo-qwen-omni-turbo-2025-03-26",
@@ -3852,7 +3859,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-omni-turbo-latest",
@@ -3872,7 +3879,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-omni-turbo-2025-03-26",
@@ -3892,7 +3899,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-omni-turbo-2025-01-19",
@@ -3912,7 +3919,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-plus-realtime-qwen3.5-omni-plus-realtime-2026-03-15",
@@ -3932,7 +3939,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-plus-realtime-2026-03-15",
@@ -3952,7 +3959,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-flash-realtime-qwen3.5-omni-flash-realtime-2026-03-15",
@@ -3972,7 +3979,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-omni-flash-realtime-2026-03-15",
@@ -3992,7 +3999,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-omni-flash-realtime-qwen3-omni-flash-realtime-2025-12-01",
@@ -4012,7 +4019,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-omni-flash-realtime-2025-12-01",
@@ -4032,7 +4039,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-omni-flash-realtime-2025-09-15",
@@ -4052,7 +4059,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-omni-turbo-realtime-qwen-omni-turbo-realtime-2025-05-08",
@@ -4072,7 +4079,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-omni-turbo-realtime-latest",
@@ -4092,7 +4099,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-omni-turbo-realtime-2025-05-08",
@@ -4112,7 +4119,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qvq-max",
@@ -4170,7 +4177,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-plus-2025-12-19",
@@ -4190,7 +4197,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-plus-2025-09-23",
@@ -4210,7 +4217,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-flash-qwen3-vl-flash-2026-01-22-batch",
@@ -4230,7 +4237,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-flash-2026-01-22",
@@ -4250,7 +4257,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-flash-2025-10-15",
@@ -4270,7 +4277,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-max",
@@ -4290,7 +4297,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-plus",
@@ -4310,7 +4317,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-flash-qwen3-vl-flash-2025-10-15",
@@ -4330,7 +4337,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-flash",
@@ -4350,7 +4357,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-plus-qwen3-vl-plus-2025-12-19",
@@ -4370,7 +4377,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-flash-qwen3-vl-flash-2026-01-22",
@@ -4390,7 +4397,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-plus",
@@ -4410,7 +4417,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-ocr",
@@ -4430,7 +4437,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-ocr-qwen-vl-ocr-2025-11-20-batch",
@@ -4450,7 +4457,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-ocr-latest-batch",
@@ -4470,7 +4477,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-ocr-2025-11-20",
@@ -4490,7 +4497,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-ocr-2025-08-28",
@@ -4510,7 +4517,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-ocr-2025-04-13",
@@ -4530,7 +4537,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-ocr-2024-10-28",
@@ -4550,7 +4557,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-vl-ocr-qwen-vl-ocr-2025-11-20",
@@ -4570,7 +4577,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-turbo",
@@ -4590,7 +4597,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-math-plus",
@@ -4610,7 +4617,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-math-turbo",
@@ -4630,7 +4637,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-plus-qwen3-coder-plus-2025-09-23",
@@ -4650,7 +4657,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-plus-2025-09-23",
@@ -4670,7 +4677,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-plus-2025-07-22",
@@ -4690,7 +4697,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-flash-qwen3-coder-flash-2025-07-28",
@@ -4710,7 +4717,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-flash-2025-07-28",
@@ -4730,7 +4737,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-coder-plus",
@@ -4750,7 +4757,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-coder-turbo",
@@ -4770,7 +4777,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-mt-uni",
@@ -4790,7 +4797,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-mt-plus",
@@ -4810,7 +4817,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-mt-flash",
@@ -4830,7 +4837,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-mt-lite",
@@ -4850,7 +4857,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-mt-turbo",
@@ -4870,7 +4877,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-doc-turbo",
@@ -4890,7 +4897,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-deep-research",
@@ -4910,7 +4917,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-deep-research-2025-12-15",
@@ -4930,7 +4937,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "tongyi-xiaomi-analysis-flash",
@@ -4988,7 +4995,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.8-27b",
@@ -5008,7 +5015,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-35b-a3b",
@@ -5028,7 +5035,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.6-27b",
@@ -5048,7 +5055,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-397b-a17b",
@@ -5068,7 +5075,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-122b-a10b",
@@ -5088,7 +5095,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-27b",
@@ -5108,7 +5115,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-35b-a3b",
@@ -5128,7 +5135,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-next-80b-a3b-thinking",
@@ -5148,7 +5155,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-next-80b-a3b-instruct",
@@ -5168,7 +5175,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-235b-a22b-thinking-2507",
@@ -5188,7 +5195,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -5208,7 +5215,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-30b-a3b-thinking-2507",
@@ -5228,7 +5235,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-30b-a3b-instruct-2507",
@@ -5248,7 +5255,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-235b-a22b",
@@ -5268,7 +5275,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-32b",
@@ -5288,7 +5295,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-30b-a3b",
@@ -5308,7 +5315,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-14b",
@@ -5328,7 +5335,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-8b",
@@ -5348,7 +5355,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen2.5-omni-7b",
@@ -5368,7 +5375,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-omni-30b-a3b-captioner",
@@ -5388,7 +5395,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-235b-a22b-thinking",
@@ -5408,7 +5415,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-235b-a22b-instruct",
@@ -5428,7 +5435,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-32b-thinking",
@@ -5448,7 +5455,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-32b-instruct",
@@ -5468,7 +5475,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-30b-a3b-thinking",
@@ -5488,7 +5495,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-30b-a3b-instruct",
@@ -5508,7 +5515,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-8b-thinking",
@@ -5528,7 +5535,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-8b-instruct",
@@ -5548,7 +5555,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen2-audio-instruct",
@@ -5568,7 +5575,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-next",
@@ -5588,7 +5595,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct",
@@ -5608,7 +5615,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-coder-30b-a3b-instruct",
@@ -5628,7 +5635,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-3.0-pro",
@@ -5648,7 +5655,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-3.0",
@@ -5668,7 +5675,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-2.0-pro-qwen-image-2.0-pro-2026-04-22",
@@ -5688,7 +5695,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-2.0-pro-2026-06-22",
@@ -5708,7 +5715,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-2.0-pro-2026-04-22",
@@ -5728,7 +5735,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-2.0-pro-2026-03-03",
@@ -5748,7 +5755,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-2.0-qwen-image-2.0-2026-03-03",
@@ -5768,7 +5775,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-2.0-2026-03-03",
@@ -5788,7 +5795,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-max-qwen-image-max-2025-12-30",
@@ -5808,7 +5815,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-max-2025-12-30",
@@ -5828,7 +5835,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-plus-qwen-image",
@@ -5848,7 +5855,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-plus-2026-01-09",
@@ -5868,7 +5875,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image",
@@ -5888,7 +5895,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-edit-max-qwen-image-edit-max-2026-01-16",
@@ -5908,7 +5915,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-edit-max-2026-01-16",
@@ -5928,7 +5935,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-edit-plus-qwen-image-edit-plus-2025-10-30",
@@ -5948,7 +5955,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-edit-plus-2025-12-15",
@@ -5968,7 +5975,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-edit-plus-2025-10-30",
@@ -5988,7 +5995,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-image-edit",
@@ -6008,7 +6015,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-mt-image-2.0",
@@ -6028,7 +6035,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-mt-image",
@@ -6048,7 +6055,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.1-tts-flash",
@@ -6068,7 +6075,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.0-tts-plus",
@@ -6088,7 +6095,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.0-tts-flash",
@@ -6108,7 +6115,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-instruct-flash-qwen3-tts-instruct-flash-2026-01-26",
@@ -6128,7 +6135,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-instruct-flash-2026-01-26",
@@ -6148,7 +6155,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-vd-2026-01-26",
@@ -6168,7 +6175,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-vc-2026-01-22",
@@ -6188,7 +6195,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-flash-qwen3-tts-flash-2025-11-27",
@@ -6208,7 +6215,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-flash-2025-11-27",
@@ -6228,7 +6235,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-flash-2025-09-18",
@@ -6248,7 +6255,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-tts-flash",
@@ -6268,7 +6275,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-tts-latest",
@@ -6288,7 +6295,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-tts-2025-05-22",
@@ -6308,7 +6315,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-tts-2025-04-10",
@@ -6328,7 +6335,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-instruct-flash-realtime-qwen3-tts-instruct-flash-realtime-2026-01-22",
@@ -6348,7 +6355,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-instruct-flash-realtime-2026-01-22",
@@ -6368,7 +6375,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-vd-realtime-2026-01-15",
@@ -6388,7 +6395,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-vd-realtime-2025-12-16",
@@ -6408,7 +6415,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-vc-realtime-2026-01-15",
@@ -6428,7 +6435,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-vc-realtime-2025-11-27",
@@ -6448,7 +6455,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-flash-realtime",
@@ -6468,7 +6475,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-flash-realtime-2025-11-27",
@@ -6488,7 +6495,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-flash-realtime-2025-09-18",
@@ -6508,7 +6515,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-tts-realtime",
@@ -6528,7 +6535,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-tts-realtime-latest",
@@ -6548,7 +6555,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-tts-realtime-2025-07-15",
@@ -6568,7 +6575,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-tts-flash-realtime-qwen3-tts-flash-realtime-2025-11-27",
@@ -6588,7 +6595,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.8-livetranslate-flash-realtime",
@@ -6608,7 +6615,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-livetranslate-flash-realtime",
@@ -6628,7 +6635,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.5-livetranslate-flash-realtime-2026-05-19",
@@ -6648,7 +6655,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-livetranslate-flash-realtime-qwen3-livetranslate-flash-realtime-2025-09-22",
@@ -6668,7 +6675,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-livetranslate-flash-realtime-2025-09-22",
@@ -6688,7 +6695,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-livetranslate-flash",
@@ -6708,7 +6715,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-livetranslate-flash-2025-12-01",
@@ -6728,7 +6735,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.1-asr-flash-message",
@@ -6748,7 +6755,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.1-asr-flash-streaming",
@@ -6768,7 +6775,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.0-asr-flash-streaming",
@@ -6788,7 +6795,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.1-asr-flash-filetrans",
@@ -6808,7 +6815,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.0-asr-flash-filetrans",
@@ -6828,7 +6835,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.1-asr-flash",
@@ -6848,7 +6855,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.0-asr-flash",
@@ -6868,7 +6875,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-filetrans",
@@ -6888,7 +6895,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-filetrans-2025-11-17",
@@ -6908,7 +6915,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-qwen3-asr-flash-2025-09-08",
@@ -6928,7 +6935,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-2026-02-10",
@@ -6948,7 +6955,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-2025-09-08",
@@ -6968,7 +6975,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash",
@@ -6988,7 +6995,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-realtime-qwen3-asr-flash-realtime-2025-10-27",
@@ -7008,7 +7015,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-realtime-2026-02-10",
@@ -7028,7 +7035,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-asr-flash-realtime-2025-10-27",
@@ -7048,7 +7055,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.1-realtime-plus",
@@ -7068,7 +7075,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.0-realtime-plus",
@@ -7088,7 +7095,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-audio-3.0-realtime-flash",
@@ -7108,7 +7115,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-text-embedding-batch",
@@ -7128,7 +7135,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-text-embedding-flash-batch",
@@ -7148,7 +7155,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3.7-text-embedding",
@@ -7168,7 +7175,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-embedding",
@@ -7188,7 +7195,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen2.5-vl-embedding",
@@ -7208,7 +7215,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "tongyi-embedding-vision-plus",
@@ -7266,7 +7273,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-vl-rerank",
@@ -7286,7 +7293,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen3-rerank",
@@ -7306,7 +7313,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "tongyi-intent-detect-v3",
@@ -7345,7 +7352,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-flash-character-session-cache",
@@ -7365,7 +7372,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-flash-character-2026-02-26-session-cache",
@@ -7385,7 +7392,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-character-ja",
@@ -7405,7 +7412,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-plus-character",
@@ -7425,7 +7432,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "qwen-flash-character",
@@ -7445,7 +7452,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "aliyun-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "deepseek-v4-pro",
@@ -7472,7 +7479,7 @@
         "DeepSeek 官方 api-docs.deepseek.com；高峰工作日 9-12/14-18（法定节假日除外）。"
       ],
       "source": "deepseek-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "kimi-k3",
@@ -7602,7 +7609,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-09-24T08:00:12+00:00"
+          "last_checked_at": "2026-09-24T10:03:45+00:00"
         }
       },
       "notes": [
@@ -7649,7 +7656,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-09-24T08:00:12+00:00"
+          "last_checked_at": "2026-09-24T10:03:45+00:00"
         }
       },
       "notes": [
@@ -7674,7 +7681,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "kimi-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "kimi-k2.7-code-highspeed",
@@ -7694,7 +7701,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "kimi-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     },
     {
       "id": "kimi-k2.6",
@@ -7714,83 +7721,86 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "kimi-api",
-      "last_checked_at": "2026-09-24T08:00:12+00:00"
+      "last_checked_at": "2026-09-24T10:03:45+00:00"
     }
   ],
-  "updated_at": "2026-09-24",
-  "content_hash": "4004def4a52cbd3396f59dbde70f16cb96f89bdef6ca74c894688c4dde3323ee",
+  "updated_at": "2026-09-24T10:03:45+00:00",
+  "content_hash": "ecaa46d70e36b6bc8c26fadc46929cf7fe85d24d13a7d6071831b944bb498b8e",
   "source_status": {
     "openai-api": {
       "status": "parsed",
       "count": 4,
-      "last_attempt": "2026-09-24T08:00:12+00:00",
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 0
     },
     "claude-api": {
       "status": "parsed",
       "message": "页面已获取，但解析结果为空；保留旧数据",
-      "last_attempt": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
       "count": 18,
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 0
     },
     "xai-api": {
       "status": "parsed",
       "count": 8,
-      "last_attempt": "2026-09-24T08:00:12+00:00",
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 4
     },
     "deepseek-api": {
       "status": "parsed",
       "count": 2,
-      "last_attempt": "2026-09-24T08:00:12+00:00",
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 0
     },
     "zhipu-api": {
       "status": "parsed",
       "count": 32,
-      "last_attempt": "2026-09-24T08:00:12+00:00",
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 6
     },
     "google-api": {
-      "status": "failed",
+      "status": "parsed",
       "message": "页面已获取，但解析结果为空；保留旧数据",
-      "last_attempt": "2026-09-24T08:00:12+00:00"
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "count": 10,
+      "last_parsed": "2026-09-24T10:03:45+00:00",
+      "review_count": 6
     },
     "kimi-api": {
       "status": "parsed",
       "count": 4,
-      "last_attempt": "2026-09-24T08:00:12+00:00",
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 1
     },
     "minimax-api": {
       "status": "parsed",
       "count": 10,
-      "last_attempt": "2026-09-24T08:00:12+00:00",
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 4
     },
     "aliyun-api": {
       "status": "parsed",
       "count": 241,
-      "last_attempt": "2026-09-24T08:00:12+00:00",
-      "last_parsed": "2026-09-24T08:00:12+00:00",
+      "last_attempt": "2026-09-24T10:03:45+00:00",
+      "last_parsed": "2026-09-24T10:03:45+00:00",
       "review_count": 1
     },
     "volcengine-api": {
       "status": "manual",
       "message": "需要人工维护",
-      "last_attempt": "2026-09-24T08:00:12+00:00"
+      "last_attempt": "2026-09-24T10:03:45+00:00"
     },
     "zai-api": {
       "status": "manual",
       "message": "需要人工维护",
-      "last_attempt": "2026-09-24T08:00:12+00:00"
+      "last_attempt": "2026-09-24T10:03:45+00:00"
     }
   }
 }
