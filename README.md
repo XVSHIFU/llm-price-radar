@@ -74,6 +74,16 @@ Excel 导入前安装 `python -m pip install -r requirements-import.txt`。它�
 
 ## 首次配置与回滚
 
+### Google 抓取范围
+
+`google_prices.py` 只读取英文官方页的 Standard 付费 token 表；不采集 Batch、Flex、Priority、音频专用、图像生成或工具调用价格。支持明确的文本价格、上下文长度分档、`through` / `starting` 日期条件，以及独立的缓存存储费（美元 / 百万 token·小时）。日期按 UTC 判断。
+
+未知条件、缺失档位或歧义价格会跳过该模型，保留旧数据；解析数量不代表官网全量模型覆盖。新模型和与库内标签不一致的档位仍进入 `reports/review.json`。跨年价格标签会变化，因此需人工核对后迁移，避免新价格配上旧日期说明。连接采用有限的退避重试，不绕过 TLS 校验。
+
+离线回归：`python -m unittest discover -s tests -p test_google.py -v`。在线预览：`python fetch_prices.py google`（不加 `--apply` 不改价格库）。
+
+## Pages 配置
+
 仓库 Settings → Pages → Source 选择 **GitHub Actions**。工作流需要写入仓库数据和部署 Pages 的权限，已在 YAML 中按 job 声明，无需配置个人 token 或 SSH 密钥。
 
 恢复旧数据：在 Git 中撤销有问题的数据提交，再推送 `main`；或者恢复所需版本的 `data.json` / `plans.json`，运行 `python build_site.py --sync` 后提交。不要仅重跑旧的 Actions run 来回滚，本工作流始终检出最新 `main`。

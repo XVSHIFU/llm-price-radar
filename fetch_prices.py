@@ -25,6 +25,7 @@ import os
 import re
 import sys
 import json
+import time
 import http.cookiejar
 from html import unescape
 import urllib.request
@@ -72,6 +73,8 @@ class PricingRedirectHandler(urllib.request.HTTPRedirectHandler):
 def fetch(url, timeout=25, retries=2):
     last = None
     for _ in range(retries + 1):
+        if _:
+            time.sleep(min(2 ** (_ - 1), 4))
         try:
             redirects = PricingRedirectHandler()
             opener = urllib.request.build_opener(
@@ -224,22 +227,9 @@ def parse_zhipu_cn(html):
     return out
 
 
-def parse_google(html):
-    """ai.google.dev/gemini-api/docs/pricing（网络受限环境可能抓不到）。
-    行格式参考：gemini-3.8-flash ... $0.75 $3.75 ...（标准/促销多档）。"""
-    t = _text(html)
-    pat = re.compile(r'(gemini-[\w.-]+)\b[^$]*?\$([\d.]+)\s+\$([\d.]+)')
-    seen, out = set(), []
-    for m in pat.finditer(t):
-        mid = m.group(1)
-        if mid in seen:
-            continue
-        seen.add(mid)
-        out.append({'id': mid, 'name': mid.replace('-', ' ').title(), 'provider': 'Google', 'currency': 'USD',
-                    'rates': [{'label': '标准', 'input': _f(m.group(2)), 'output': _f(m.group(3)),
-                               'read': None, 'write': None}],
-                    'notes': ['来源 ai.google.dev/gemini-api/docs/pricing。']})
-    return out
+def parse_google(html, today=None):
+    from google_prices import parse_google as parse_standard_prices
+    return parse_standard_prices(html, today=today)
 
 
 # ============================================================
@@ -365,7 +355,7 @@ SOURCES = [
     ("xai-api",     "xAI · API 定价", "https://docs.x.ai/developers/pricing", "html", parse_xai, None),
     ("deepseek-api", "DeepSeek · 模型与价格", "https://api-docs.deepseek.com/zh-cn/quick_start/pricing", "html", parse_deepseek, None),
     ("zhipu-api",   "智谱 · GLM API 定价（国内）", "https://docs.bigmodel.cn/cn/guide/start/pricing", "html", parse_zhipu_cn, None),
-    ("google-api",  "Google · Gemini API 定价", "https://ai.google.dev/gemini-api/docs/pricing", "html", parse_google, None),
+    ("google-api",  "Google · Gemini API 定价", "https://ai.google.dev/gemini-api/docs/pricing?hl=en", "html", parse_google, None),
     # ---- 文档站 .md（格式, 列映射, 厂商） ----
     ("kimi-api", "Moonshot Kimi · API 定价", "https://platform.kimi.com/docs/pricing/chat.md", "md", None,
      ("doc_table", {"model": "模型", "input_miss": "未命中", "read": "命中", "write5m": "5min",
