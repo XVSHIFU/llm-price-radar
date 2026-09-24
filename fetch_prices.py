@@ -25,7 +25,10 @@ import os
 import re
 import sys
 import json
+import http.cookiejar
+from html import unescape
 import urllib.request
+from urllib.parse import urlsplit
 from datetime import datetime, timezone
 from pathlib import Path
 from price_data import atomic_write, read_json, publish
@@ -55,19 +58,34 @@ def _f(s):
         return None
 
 
+class PricingRedirectHandler(urllib.request.HTTPRedirectHandler):
+    """Keep bounded, query-free redirect diagnostics (never log session tokens)."""
+    def __init__(self):
+        self.hops = []
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        target = urlsplit(newurl)
+        self.hops.append(f'{code} {target.scheme}://{target.netloc}{target.path}')
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
 def fetch(url, timeout=25, retries=2):
     last = None
     for _ in range(retries + 1):
         try:
+            redirects = PricingRedirectHandler()
+            opener = urllib.request.build_opener(
+                urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()), redirects)
             req = urllib.request.Request(url, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
+            with opener.open(req, timeout=timeout) as resp:
                 raw = resp.read()
                 try:
                     return resp.status, raw.decode("utf-8")
                 except UnicodeDecodeError:
                     return resp.status, raw.decode("utf-8", errors="replace")
         except Exception as e:
-            last = e
+            last = RuntimeError(f'{type(e).__name__}: request failed after redirects: '
+                                + ' -> '.join(redirects.hops[-8:])) if redirects.hops else e
     raise last
 
 
@@ -75,31 +93,46 @@ def fetch(url, timeout=25, retries=2):
 # 静态 HTML 解析器
 # ============================================================
 def parse_anthropic(html):
-    """platform.claude.com/docs/en/about-claude/pricing：模型 + 5 列（in/write5m/write1h/read/out）。"""
-    t = _text(html)
-    pat = re.compile(
-        r'Claude\s+(\w+\s+[\w.]+)\s*(?:\([^)]*\))?\s*'
-        r'\$([\d.]+)\s*/\s*MTok\s+'
-        r'\$([\d.]+)\s*/\s*MTok\s+'
-        r'\$([\d.]+)\s*/\s*MTok\s+'
-        r'\$([\d.]+)\s*/\s*MTok\s*(?:\d\s*)?'
-        r'\$([\d.]+)\s*/\s*MTok')
-    seen, models = set(), []
-    for m in pat.finditer(t):
-        mid = 'claude-' + m.group(1).lower().replace(' ', '-')
-        if mid in seen:
-            continue
-        inp, outv = _f(m.group(2)), _f(m.group(6))
-        if not (inp and outv) or outv < inp:
-            continue  # 列错位/页面渲染不全（正常模型 output >= input）
-        models.append({'id': mid, 'name': 'Claude ' + m.group(1), 'provider': 'Anthropic', 'currency': 'USD',
-                       'rates': [
-                           {'label': '缓存保留 5 分钟', 'input': inp, 'output': outv,
-                            'read': _f(m.group(5)), 'write': _f(m.group(3))},
-                           {'label': '缓存保留 1 小时', 'input': inp, 'output': outv,
-                            'read': _f(m.group(5)), 'write': _f(m.group(4))}],
-                       'notes': ['来源 platform.claude.com/docs/en/about-claude/pricing。']})
-    return models
+    """Read named columns, never infer price meaning from page-wide position."""
+    aliases = {'name': 'model', 'model': 'model', 'input': 'input',
+               'output': 'output', '5m writes': 'write5m', '1h writes': 'write1h',
+               'hits and refreshes': 'read'}
+    models = {}
+    for table in re.findall(r'<table\b[^>]*>(.*?)</table>', html, re.S | re.I):
+        columns = None
+        for row in re.findall(r'<tr\b[^>]*>(.*?)</tr>', table, re.S | re.I):
+            headers = re.findall(r'<th\b[^>]*>(.*?)</th>', row, re.S | re.I)
+            if headers:
+                # A full-width "Additional models" section is not a new schema.
+                if len(headers) == 1 and re.search(r'<th\b[^>]*colspan=["\x27]?6\b', row, re.I):
+                    continue
+                keys = [aliases.get(unescape(_text(h)).strip().lower()) for h in headers]
+                columns = keys if len(keys) == 6 and set(keys) == set(aliases.values()) else None
+                continue
+            cells = re.findall(r'<td\b[^>]*>(.*?)</td>', row, re.S | re.I)
+            if columns is None or len(cells) != len(columns):
+                continue
+            values = dict(zip(columns, [unescape(_text(c)).strip() for c in cells]))
+            name = re.match(r'Claude\s+([A-Za-z]+\s+\d+(?:\.\d+)*)\b', values['model'])
+            if not name:
+                continue
+            prices = {}
+            for key in ('input', 'output', 'write5m', 'write1h', 'read'):
+                matches = re.findall(r'\$(\d+(?:\.\d+)?)\s*/\s*MTok\b', values[key])
+                if len(matches) == 1 and values[key].count('$') == 1:
+                    prices[key] = float(matches[0])
+            if len(prices) != 5:
+                continue
+            mid = 'claude-' + name[1].lower().replace(' ', '-')
+            model = {'id': mid, 'name': 'Claude ' + name[1], 'provider': 'Anthropic', 'currency': 'USD',
+                     'rates': [{'label': label, 'input': prices['input'], 'output': prices['output'],
+                                'read': prices['read'], 'write': prices[key]}
+                               for label, key in [('缓存保留 5 分钟', 'write5m'), ('缓存保留 1 小时', 'write1h')]],
+                     'notes': ['来源 platform.claude.com/docs/en/about-claude/pricing。']}
+            if mid in models and models[mid]['rates'] != model['rates']:
+                raise ValueError('Anthropic conflicting price rows: ' + mid)
+            models[mid] = model
+    return list(models.values())
 
 
 def parse_openai(html):
