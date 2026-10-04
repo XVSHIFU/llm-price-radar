@@ -160,81 +160,81 @@
     "openai-api": {
       "status": "parsed",
       "count": 4,
-      "last_attempt": "2026-10-03T05:38:32+00:00",
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 1
     },
     "claude-api": {
       "status": "parsed",
       "message": "页面已获取，但解析结果为空；保留旧数据",
-      "last_attempt": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
       "count": 19,
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 1
     },
     "xai-api": {
       "status": "parsed",
       "count": 8,
-      "last_attempt": "2026-10-03T05:38:32+00:00",
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 4
     },
     "deepseek-api": {
       "status": "parsed",
       "count": 2,
-      "last_attempt": "2026-10-03T05:38:32+00:00",
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 0
     },
     "zhipu-api": {
       "status": "parsed",
       "count": 32,
-      "last_attempt": "2026-10-03T05:38:32+00:00",
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 6
     },
     "google-api": {
       "status": "parsed",
       "message": "页面已获取，但解析结果为空；保留旧数据",
-      "last_attempt": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
       "count": 10,
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 6
     },
     "kimi-api": {
       "status": "parsed",
       "count": 4,
-      "last_attempt": "2026-10-03T05:38:32+00:00",
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 1
     },
     "minimax-api": {
       "status": "parsed",
       "count": 10,
-      "last_attempt": "2026-10-03T05:38:32+00:00",
-      "last_parsed": "2026-10-03T05:38:32+00:00",
+      "last_attempt": "2026-10-04T06:13:40+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
       "review_count": 4
     },
     "aliyun-api": {
       "status": "parsed",
-      "count": 241,
-      "last_attempt": "2026-10-03T05:38:32+00:00",
-      "last_parsed": "2026-10-03T05:38:32+00:00",
-      "review_count": 1
+      "count": 242,
+      "last_attempt": "2026-10-04T06:13:40+00:00",
+      "last_parsed": "2026-10-04T06:13:40+00:00",
+      "review_count": 4
     },
     "volcengine-api": {
       "status": "manual",
       "message": "需要人工维护",
-      "last_attempt": "2026-10-03T05:38:32+00:00"
+      "last_attempt": "2026-10-04T06:13:40+00:00"
     },
     "zai-api": {
       "status": "manual",
       "message": "需要人工维护",
-      "last_attempt": "2026-10-03T05:38:32+00:00"
+      "last_attempt": "2026-10-04T06:13:40+00:00"
     }
   },
   "content_hashes": {
-    "models": "0facda4b5310da1f88452687859278341155ae0a78a87e88f52317ef97996f4a",
+    "models": "e8f0faef3f41ad17abce15ef6a2119d1e5a85daed73b19218bbdd933963c4f6e",
     "plans": "8a673bfecf3a88df8b4f3fb70f2b4a14a2b866556443dca0265a0010e8565ff3"
   }
 }
