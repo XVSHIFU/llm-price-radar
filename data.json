@@ -389,7 +389,7 @@
         "显式缓存存储另计 $0.50 / 百万 token·小时。官方未在此表单列写入单价；“未单列”不等于免费。",
         "输出计入思考 token；检索、音视频及其他工具费不包含在本版试算中。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "gemini-2.5-pro",
@@ -420,7 +420,7 @@
         "Standard 付费档；输入超过 200K 时，输出单价也随档位变化。",
         "显式缓存存储另计 $4.50 / 百万 token·小时。未单列写入单价，不代表免费。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "gemini-2.5-flash-lite",
@@ -443,7 +443,7 @@
         "此处为文本 Standard 付费档，不套用免费层或 Batch 折扣。",
         "显式缓存存储另计 $1 / 百万 token·小时。未单列写入单价，不代表免费。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "deepseek-flash",
@@ -474,7 +474,7 @@
         "高峰：北京时间周一至周五 9:00–12:00、14:00–18:00，中国法定节假日除外；其余为半价空闲时段。",
         "价格为人民币，未做汇率换算。官方只列缓存命中与未命中输入，未单列写入费。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "grok-4.6",
@@ -805,7 +805,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-10-27T05:28:20+00:00"
+          "last_checked_at": "2026-10-28T06:11:17+00:00"
         }
       },
       "notes": [
@@ -852,7 +852,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-10-27T05:28:20+00:00"
+          "last_checked_at": "2026-10-28T06:11:17+00:00"
         }
       },
       "notes": [
@@ -1197,7 +1197,7 @@
         "Preview 型号。"
       ],
       "price_updated_at": "2026-09-24T10:03:45+00:00",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "minimax-m2.1",
@@ -1852,7 +1852,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "grok-4.20-multi-agent-0309",
@@ -1879,7 +1879,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "grok-4.20-0309-reasoning",
@@ -1906,7 +1906,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "grok-4.20-0309-non-reasoning",
@@ -1933,7 +1933,7 @@
       "notes": [
         "来源 docs.x.ai/developers/pricing。"
       ],
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-5-2-cn",
@@ -1953,7 +1953,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-5-1-cn",
@@ -1973,7 +1973,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-5-turbo-cn",
@@ -1993,7 +1993,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-5-cn",
@@ -2013,7 +2013,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-5-air-cn",
@@ -2033,7 +2033,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-7-flashx-cn",
@@ -2053,7 +2053,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-plus-cn",
@@ -2073,7 +2073,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-air-250414-cn",
@@ -2093,7 +2093,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-airx-cn",
@@ -2113,7 +2113,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-long-cn",
@@ -2133,7 +2133,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-assistant-cn",
@@ -2153,7 +2153,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-z1-air-cn",
@@ -2173,7 +2173,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-z1-airx-cn",
@@ -2193,7 +2193,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-z1-flashx-cn",
@@ -2213,7 +2213,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-flashx-250414-cn",
@@ -2233,7 +2233,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-ocr-cn",
@@ -2253,7 +2253,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-5v-turbo-cn",
@@ -2273,7 +2273,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-6v-cn",
@@ -2293,7 +2293,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-6v-flashx-cn",
@@ -2313,7 +2313,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-5v-cn",
@@ -2333,7 +2333,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4v-plus-0111-cn",
@@ -2353,7 +2353,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "glm-4-1v-thinking-flashx-cn",
@@ -2373,7 +2373,7 @@
         "国内 bigmodel.cn 官方页；缓存存储限时免费，write 未单列。"
       ],
       "source": "zhipu-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "minimax-m3-512k-tokens",
@@ -2400,7 +2400,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "minimax-m2.7-highspeed",
@@ -2480,7 +2480,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "api-vlm",
@@ -2500,7 +2500,7 @@
         "来源 Mintlify .md 定价文档。"
       ],
       "source": "minimax-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "qwen3.8-max-prime",
@@ -7481,7 +7481,7 @@
         "DeepSeek 官方 api-docs.deepseek.com；高峰工作日 9-12/14-18（法定节假日除外）。"
       ],
       "source": "deepseek-api",
-      "last_checked_at": "2026-10-27T05:28:20+00:00"
+      "last_checked_at": "2026-10-28T06:11:17+00:00"
     },
     {
       "id": "kimi-k3",
@@ -7611,7 +7611,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-10-27T05:28:20+00:00"
+          "last_checked_at": "2026-10-28T06:11:17+00:00"
         }
       },
       "notes": [
@@ -7658,7 +7658,7 @@
               "write": null
             }
           ],
-          "last_checked_at": "2026-10-27T05:28:20+00:00"
+          "last_checked_at": "2026-10-28T06:11:17+00:00"
         }
       },
       "notes": [
@@ -7727,12 +7727,12 @@
     }
   ],
   "updated_at": "2026-10-13T07:01:19+00:00",
-  "content_hash": "43e04e2759ce03e9028ef7149d36751d92f2c96232a9806945c5a211432e62ad",
+  "content_hash": "7b7a657e8b38e3ca419a668f50eb6c0cf842cbad1b6fa2c0da97a35a2212d1e6",
   "source_status": {
     "openai-api": {
       "status": "failed",
       "count": 4,
-      "last_attempt": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
       "last_parsed": "2026-10-20T05:10:35+00:00",
       "review_count": 1,
       "message": "页面已获取，但解析结果为空；保留旧数据"
@@ -7740,7 +7740,7 @@
     "claude-api": {
       "status": "failed",
       "message": "页面已获取，但解析结果为空；保留旧数据",
-      "last_attempt": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
       "count": 20,
       "last_parsed": "2026-10-11T06:17:35+00:00",
       "review_count": 2
@@ -7748,36 +7748,36 @@
     "xai-api": {
       "status": "parsed",
       "count": 8,
-      "last_attempt": "2026-10-27T05:28:20+00:00",
-      "last_parsed": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
+      "last_parsed": "2026-10-28T06:11:17+00:00",
       "review_count": 4
     },
     "deepseek-api": {
       "status": "parsed",
       "count": 2,
-      "last_attempt": "2026-10-27T05:28:20+00:00",
-      "last_parsed": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
+      "last_parsed": "2026-10-28T06:11:17+00:00",
       "review_count": 0
     },
     "zhipu-api": {
       "status": "parsed",
       "count": 33,
-      "last_attempt": "2026-10-27T05:28:20+00:00",
-      "last_parsed": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
+      "last_parsed": "2026-10-28T06:11:17+00:00",
       "review_count": 7
     },
     "google-api": {
       "status": "parsed",
       "message": "Duplicate Google model section: gemini-omni-1.1-flash",
-      "last_attempt": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
       "count": 8,
-      "last_parsed": "2026-10-27T05:28:20+00:00",
+      "last_parsed": "2026-10-28T06:11:17+00:00",
       "review_count": 4
     },
     "kimi-api": {
       "status": "failed",
       "count": 4,
-      "last_attempt": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
       "last_parsed": "2026-10-20T05:10:35+00:00",
       "review_count": 1,
       "message": "页面已获取，但解析结果为空；保留旧数据"
@@ -7785,27 +7785,28 @@
     "minimax-api": {
       "status": "parsed",
       "count": 5,
-      "last_attempt": "2026-10-27T05:28:20+00:00",
-      "last_parsed": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
+      "last_parsed": "2026-10-28T06:11:17+00:00",
       "review_count": 2,
       "message": "解析数量较上次减少超过一半；保留该来源旧数据"
     },
     "aliyun-api": {
-      "status": "parsed",
+      "status": "failed",
       "count": 134,
-      "last_attempt": "2026-10-27T05:28:20+00:00",
+      "last_attempt": "2026-10-28T06:11:17+00:00",
       "last_parsed": "2026-10-27T05:28:20+00:00",
-      "review_count": 11
+      "review_count": 11,
+      "message": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     "volcengine-api": {
       "status": "manual",
       "message": "需要人工维护",
-      "last_attempt": "2026-10-27T05:28:20+00:00"
+      "last_attempt": "2026-10-28T06:11:17+00:00"
     },
     "zai-api": {
       "status": "manual",
       "message": "需要人工维护",
-      "last_attempt": "2026-10-27T05:28:20+00:00"
+      "last_attempt": "2026-10-28T06:11:17+00:00"
     }
   }
 }
